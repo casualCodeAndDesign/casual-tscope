@@ -8,7 +8,7 @@
 <h2>Latest Tweets (<%= @keyword.tweets.count %>)</h2>
 <ul>
   <% @keyword.tweets.each do |tweet| %>
-    <li><%= tweet.user_name %>: <%= tweet.text %></li>
+    <li><%= image_tag("#{tweet.user_image_url}", size: "30") %><%= tweet.user_name %>: <%= tweet.text %></li>
   <%end%>
 </ul>
 
