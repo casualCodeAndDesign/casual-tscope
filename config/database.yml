@@ -3,11 +3,11 @@ development:
   host: localhost
   database: tscope_dev
   username: postgres
-  password: LkPLYN1i
+  password: LkPLYN1i2806
 
 test:
   adapter: postgresql
   host: localhost
   database: tscope_test
   username: postgres
-  password: LkPLYN1i
+  password: LkPLYN1i2806
