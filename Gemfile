@@ -7,6 +7,8 @@ gem 'unicorn'
 gem "rack-timeout"
 # Use sqlite3 as the database for Active Record
 gem 'pg'
+gem 'carrierwave'
+gem "fog"
 #gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
