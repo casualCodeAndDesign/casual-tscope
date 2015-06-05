@@ -7,19 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <nav class="navbar navbar-default" role="navigation" style="padding:10px">
-        <div class="navbar-left">
-            <h4 class="text-muted"><%= link_to "Tweetscope - v1", root_path %></h4>
-        </div>
-        <div class="navbar-right">
-            <div style="float:right;">
-                <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="padding:10px;">
+
+            <div class="navbar-left" style="margin-left: 2%;">
+                <h4 class="text-muted"><%= link_to "Tweetscope - v1", root_path %></h4>
             </div>
-        </div>
+            <div class="navbar-right" style="margin-right: 2%;">
+                <div style="float:right;">
+                    <ul class="nav nav-pills pull-right">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
     </nav>
     <div class="content">    
       <%= yield %>
