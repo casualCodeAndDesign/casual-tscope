@@ -8,7 +8,8 @@ gem "rack-timeout"
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 gem 'carrierwave'
-gem 'fog'
+gem 'fog', require: "fog/aws/storage"
+gem 'asset_sync'
 gem 'mini_magick'
 
 #gem 'sqlite3'
