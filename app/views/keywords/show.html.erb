@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
-<%= image_tag(@keyword.image.thumb.url) if @keyword.image? %>
-<h2>Word:</h2>
-<p><%= @keyword.word %></p>
+<%= image_tag(@keyword.image.thumb.url, :class => 'img-circle')if @keyword.image? %>
+<%= @keyword.word.capitalize %>
 
 <h2>Latest Tweets (<%= @keyword.tweets.count %>)</h2>
-<ul>
+<table class="table table-hover">
     <% @tweets.each do |tweet| %>
-    <li><%= image_tag("#{tweet.user_image_url}", size: "30") %><%= tweet.user_name %>: <%= tweet.text %></li>
-  <%end%>
-</ul>
+        <tr>
+            <td><%= image_tag("#{tweet.user_image_url}", class: "img-circle") %><br><%= tweet.user_name %></td>
+            <td style="padding-top: 2%;"><%= tweet.text %></td>
+        </tr>
+    <%end%>
+</table>
 <div style="padding:20px;border:solid 1px #ccc;margin-bottom: 20px">
     <%= will_paginate @tweets %>
 </div>

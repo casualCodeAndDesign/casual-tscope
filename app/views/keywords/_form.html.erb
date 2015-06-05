@@ -11,19 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :word %><br>
     <%= f.text_field :word %>
   </div>
 
 
-  <div class="field">
+  <div class="form-group">
       <%= image_tag(@keyword.image_url, :width => "100") if @keyword.image? %>
       <%= f.file_field :image %>
       <%= f.hidden_field :image_cache %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit :class => 'btn btn-primary' %>
   </div>
 <% end %>
