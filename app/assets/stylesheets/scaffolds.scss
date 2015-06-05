@@ -1,10 +1,32 @@
 .content {
     width: 90%;
-    margin: auto;
+    margin: 5% auto;
 }
 .footer {
     margin-top: 20px;
     padding: 20px;
     border-top: solid 1px #ccc;
     text-align: center;
+}
+
+.twitter {
+    height: 10%;
+    width: 10%;
+    fill: #55acee;
+    display: inline;
+}
+
+#logo-container { position: relative; }
+.tweetscope {
+    display: inline;
+    position: absolute;
+    top: 2%;
+    font-family: 'Gotham Narrow', Gotham, serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #55acee;
+    span {
+        font-family: 'Gotham Narrow', Gotham, serif;
+        color: #ccd6dd;  
+    }
 }
