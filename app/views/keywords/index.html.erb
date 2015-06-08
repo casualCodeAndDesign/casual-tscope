@@ -2,7 +2,7 @@
 
 <h2 style="margin-top: 40px;">Listing Keywords</h2>
 <%= link_to 'New Keyword', new_keyword_path, :class=>"btn btn-primary", :style=>"float:right" %>
-<% cache('keywords_home_table') do %>
+<% cache 'keywords_home_table', skip_digest: true do %>
     <table class="table table-striped">
       <thead>
         <tr>
