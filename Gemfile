@@ -11,6 +11,7 @@ gem 'carrierwave'
 gem 'fog', require: "fog/aws/storage"
 gem 'asset_sync'
 gem 'mini_magick'
+gem 'dalli'
 
 #gem 'sqlite3'
 # Use SCSS for stylesheets
