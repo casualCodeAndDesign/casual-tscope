@@ -9,19 +9,17 @@
           <th>Image</th>
           <th>Word</th>
           <th>Tweets</th>
-          <th colspan="2"></th>
+          <th></th>
         </tr>
       </thead>
 
       <tbody>
         <% @keywords.each do |keyword| %>
           <tr>
-            <td><%= image_tag keyword.image.thumb.url if keyword.image? %></td>  
+              <td><% if keyword.image? %><%= link_to image_tag( keyword.image.thumb.url), keyword %><% end %></td>  
             <td><%= keyword.word %></td>
             <td><%= keyword.tweets.count() %></td>
-              <td><%= link_to 'Show', keyword, class: 'btn btn-success' %></td>
-            <td><%= link_to 'Edit', edit_keyword_path(keyword), class: 'btn btn-primary' %></td>
-              <td><%= link_to 'Destroy', keyword, class: 'btn btn-danger',method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Show', keyword, class: 'btn btn-success' %>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Edit', edit_keyword_path(keyword), class: 'btn btn-primary' %>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Destroy', keyword, class: 'btn btn-danger',method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>
