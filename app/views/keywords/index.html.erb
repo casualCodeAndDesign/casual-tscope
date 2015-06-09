@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h2 style="margin-top: 40px;">Listing Keywords</h2>
+<h2 style="margin-top: 40px;">All Keywords</h2>
 <%= link_to 'New Keyword', new_keyword_path, :class=>"btn btn-primary", :style=>"float:right" %>
 <% cache 'keywords_home_table', skip_digest: true do %>
     <table class="table table-striped">
