@@ -9,6 +9,7 @@
           <th>Image</th>
           <th>Word</th>
           <th>Tweets</th>
+          <th>Quick Edit</th>
           <th></th>
         </tr>
       </thead>
@@ -19,7 +20,8 @@
               <td><% if keyword.image? %><%= link_to image_tag( keyword.image.thumb.url), keyword %><% end %></td>  
             <td><%= keyword.word %></td>
             <td><%= keyword.tweets.count() %></td>
-              <td><%= link_to 'Show', keyword, class: 'btn btn-success' %>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Edit', edit_keyword_path(keyword), class: 'btn btn-primary' %>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Destroy', keyword, class: 'btn btn-danger',method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td></td>
+            <td><%= link_to 'Show', keyword, class: 'btn btn-success' %>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Edit', edit_keyword_path(keyword), class: 'btn btn-primary' %>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Destroy', keyword, class: 'btn btn-danger',method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>
