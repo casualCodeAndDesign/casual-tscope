@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <%= image_tag(@keyword.image.thumb.url, :class => 'img-circle')if @keyword.image? %>
 <%= @keyword.word.capitalize %>
-<%= cache 'keyword_show_id_#{@keyword.id}_p#{params[:page]}', skip_digest: true, :expires_in=>23.hours do %>
+<%= cache "keyword_show_id_#{@keyword.id}_p#{params[:page]}", skip_digest: true, :expires_in=>23.hours do %>
 <h2>Latest Tweets (<%= @keyword.tweets.count %>)</h2>
 <table class="table table-hover">
     <% @tweets.each do |tweet| %>
