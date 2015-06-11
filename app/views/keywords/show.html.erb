@@ -11,10 +11,10 @@
         </tr>
     <% end %>
 </table>
+<% end %>
 <div class="pagination">
     <%= will_paginate @tweets %>
 </div>
-<% end %>
 <div>
     <%= link_to 'Edit', edit_keyword_path(@keyword), :class => 'btn btn-link' %> |
     <%= link_to 'Back', keywords_path, :class => 'btn btn-link' %>
