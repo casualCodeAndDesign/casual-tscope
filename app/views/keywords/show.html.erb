@@ -9,13 +9,12 @@
             <td><%= image_tag("#{tweet.user_image_url}", class: "img-circle") %><br><%= tweet.user_name %></td>
             <td style="padding-top: 2%;"><%= tweet.text %></td>
         </tr>
-
+    <% end %>
 </table>
-<% end %>
 <div class="pagination">
     <%= will_paginate @tweets %>
 </div>
-<%end%>
+<% end %>
 <div>
     <%= link_to 'Edit', edit_keyword_path(@keyword), :class => 'btn btn-link' %> |
     <%= link_to 'Back', keywords_path, :class => 'btn btn-link' %>
